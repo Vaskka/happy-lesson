@@ -1,0 +1,35 @@
+<!--pages/parentSetOrderInfo/parentSetOrderInfo.wxml-->
+<i-panel title="订单信息">
+    <!--电话号码-->
+    <i-input value="{{ phone }}" title="手机号码" type='number' autofocus placeholder="示例:180********" />
+    <!--家庭住址-->
+    <i-cell is-link bindtap="chooseAddress"><label class='choose-title choose'>选择家庭住址：</label>{{address_full}}</i-cell>
+    
+    <!--年级选择-->
+    <view class="choose">
+      <picker bindchange="bindPickerChange" value="{{chooseGradeIndex}}" range="{{chooseGradeArray}}">
+        <view class="choose-title"> 年级：
+        <view class='choose-content'> {{chooseGradeArray[chooseGradeIndex]}} </view> </view>
+      </picker>
+    </view>
+
+    <!--时间选择-->
+    <view class='choose'>
+      <picker
+        mode="time"
+        value="{{time}}"
+        start="00:00"
+        end="23:59"
+        bindchange="bindTimeChange"
+      >
+        <view class="choose-title"> 补课时间：<view class='choose-content'> {{time == '' ? "待定" : time}} </view> </view>
+      </picker>
+    </view>
+    
+    <i-input value="{{ status }}" type="textarea" title="学生具体情况" placeholder="学生具体情况(最多200字)" maxlength="200" />
+</i-panel>
+
+<i-alert show-icon desc>
+    温馨提醒:
+    <view slot="desc">我们会对您填写的信息严格保密，请放心输入。</view>
+</i-alert>

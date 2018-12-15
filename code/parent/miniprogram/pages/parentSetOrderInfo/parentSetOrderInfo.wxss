@@ -1,0 +1,36 @@
+/* pages/parentSetOrderInfo/parentSetOrderInfo.wxss */
+
+.choose {
+  position: relative;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  line-height: 14px;
+  overflow: hidden;
+  padding-left: 15px;
+  font-size: 15px;
+  color: #495060;
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+}
+
+.choose-title {
+  min-width: 65px;
+  color: #495060;
+  font-size: 15px;
+  padding: 4px 0;
+  line-height: 14px;
+}
+
+.choose-content {
+  position: absolute;
+  display: inline;
+  left: 90px;
+  min-height: 22px;
+
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: UICTFontTextStyleBody;
+}
